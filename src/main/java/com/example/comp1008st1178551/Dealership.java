@@ -41,4 +41,7 @@ public class Dealership {
         }
         return temp;
     }
+    public String toString(){
+        return "The inventory has " + inventory.size() + " cars worth $" + getInventoryValue();
+    }
 }

@@ -12,5 +12,6 @@ public class Main {
         System.out.println("Inventory Value $" + dealer.getInventoryValue());
         System.out.println(dealer.getCarsNewerThan(2011));
         System.out.println(dealer.getMostExpensiveCar());
+        System.out.println(dealer);
     }
 }
