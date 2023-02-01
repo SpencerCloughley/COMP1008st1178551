@@ -12,6 +12,8 @@ public class Car {
         setPrice(price);
         setYear(year);
     }
+    //creating an empty constructor
+    public Car(){}
 
     public String getMake() {
         return make;

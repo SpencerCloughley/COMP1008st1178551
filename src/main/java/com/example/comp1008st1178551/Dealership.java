@@ -32,4 +32,13 @@ public class Dealership {
         }
         return newer;
     }
+    public Car getMostExpensiveCar(){
+        Car temp=new Car();
+        temp.setPrice(0);
+        for(int i=0; i<inventory.size();i++){
+            if(inventory.get(i).getPrice()>= temp.getPrice())
+                temp=inventory.get(i);
+        }
+        return temp;
+    }
 }
