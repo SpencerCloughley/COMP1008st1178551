@@ -23,4 +23,13 @@ public class Dealership {
         }
         return sum;
     }
+    public ArrayList getCarsNewerThan(int year){
+        ArrayList newer= new ArrayList<Car>();
+        for(int i=0; i<inventory.size();i++){
+            if(inventory.get(i).getYear()>=year){
+                newer.add(inventory.get(i));
+            }
+        }
+        return newer;
+    }
 }

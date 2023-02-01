@@ -9,6 +9,7 @@ public class Main {
         Dealership dealer =new Dealership();
         dealer.addCar(car1);
         dealer.addCar(car2);
-        System.out.println("Inventory Value" + dealer.getInventoryValue());
+        System.out.println("Inventory Value $" + dealer.getInventoryValue());
+        System.out.println(dealer.getCarsNewerThan(2011));
     }
 }
