@@ -6,6 +6,12 @@ public class Car {
     private double price;
     private int year;
 
+    public Car(String make, String model, double price, int year){
+        setMake(make);
+        setModel(model);
+        setPrice(price);
+        setYear(year);
+    }
 
     public String getMake() {
         return make;
@@ -59,5 +65,9 @@ public class Car {
             this.year = year;
         else
             throw new IllegalArgumentException("Incorrect year entered, must be between 1900 and 2023 inclusive");
+    }
+
+    public String toString(){
+        return year + " " + make + " " + model + " $" + price;
     }
 }
