@@ -15,4 +15,12 @@ public class Dealership {
     public void removeCar(Car car){
         inventory.remove(car);
     }
+
+    public double getInventoryValue(){
+        double sum=0;
+        for(int i=0; i<inventory.size();i++){
+            sum += inventory.get(i).getPrice();
+        }
+        return sum;
+    }
 }
