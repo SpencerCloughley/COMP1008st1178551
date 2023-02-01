@@ -14,8 +14,15 @@ public class Car {
     public void setMake(String make) {
         //would be more ideal to turn this into a list/array of valid makes and run through instead of hard coding
         //could also add it to the thrown exception
-        if(make.equals("Ford") || make.equals("GMC") || make.equals("Honda") || make.equals("Nissan") || make.equals("BMW"))
+
+        //Checks for Values that look like "This"
+        make=make.substring(0,1).toUpperCase() + make.substring(1).toLowerCase();
+        if(make.equals("Ford") ||  make.equals("Honda") || make.equals("Nissan") )
             this.make = make;
+        //Changes to all uppercase to look for values like "THIS"
+        make=make.toUpperCase();
+        if(make.equals("GMC") || make.equals("BMW"))
+            this.make=make;
         else
             throw new IllegalArgumentException("Incorrect make entered, must be one of: Ford, GMC, Honda, Nissan, BMW");
     }
