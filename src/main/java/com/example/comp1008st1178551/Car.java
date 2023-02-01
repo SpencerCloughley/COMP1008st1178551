@@ -25,12 +25,15 @@ public class Car {
         make=make.substring(0,1).toUpperCase() + make.substring(1).toLowerCase();
         if(make.equals("Ford") ||  make.equals("Honda") || make.equals("Nissan") )
             this.make = make;
-        //Changes to all uppercase to look for values like "THIS"
-        make=make.toUpperCase();
-        if(make.equals("GMC") || make.equals("BMW"))
-            this.make=make;
-        else
-            throw new IllegalArgumentException("Incorrect make entered, must be one of: Ford, GMC, Honda, Nissan, BMW");
+        else{
+            //Changes to all uppercase to look for values like "THIS"
+            make=make.toUpperCase();
+            if(make.equals("GMC") || make.equals("BMW"))
+                this.make=make;
+            else
+                throw new IllegalArgumentException("Incorrect make entered, must be one of: Ford, GMC, Honda, Nissan, BMW");
+        }
+
     }
 
     public String getModel() {
